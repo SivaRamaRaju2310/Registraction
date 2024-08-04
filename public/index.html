@@ -41,13 +41,18 @@
           );
       }
 
+      #radius-shape-1,
+      #radius-shape-2 {
+        background: radial-gradient(#44006b, #ad1fff);
+        overflow: hidden;
+        position: absolute;
+      }
+
       #radius-shape-1 {
         height: 220px;
         width: 220px;
         top: 110px;
         left: 130px;
-        background: radial-gradient(#44006b, #ad1fff);
-        overflow: hidden;
       }
 
       #radius-shape-2 {
@@ -56,62 +61,70 @@
         right: 180px;
         width: 200px;
         height: 300px;
-        background: radial-gradient(#44006b, #ad1fff);
-        overflow: hidden;
       }
 
       #card {
         margin-top: 100px;
-        top: 7%;
-        right: 34%;
-        width: 450px;
-        margin: 100px auto;
-        text-align: center;
-        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: 450px;
         background: hsl(0, 0%, 100%);
         backdrop-filter: blur(30px);
+        text-align: center;
       }
-      .form-outline > input{
+      .form-outline > input {
         background-color: #ececec77;
+      }
+
+      @media (min-width: 768px) {
+        #card {
+          top: 7%;
+        }
       }
     </style>
 
     <section class="text-center">
-      <div
-        id="radius-shape-1"
-        class="position-absolute rounded-circle shadow-5-strong"
-      ></div>
-      <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-      <div class="card mx-9 lg-12 mx-md-5 shadow-5-strong" id="card">
-        <div class="card-body px-md-5 align-left">
+      <div id="radius-shape-1" class="rounded-circle shadow-5-strong"></div>
+      <div id="radius-shape-2" class="shadow-5-strong"></div>
+      <div class="card shadow-5-strong" id="card">
+        <div class="card-body px-md-5">
           <h2 class="fw-bold mb-5">Registration Form</h2>
-
-
-          
-          <form method="post" action="/register" style="text-align: left">
+          <form method="post" action="/register">
             <div class="form-outline mb-4">
               <label class="form-label" for="form3Example1">Name</label>
-              <input type="text" id="form3Example1" name="name" class="form-control" />
+              <input
+                type="text"
+                id="form3Example1"
+                name="name"
+                class="form-control"
+              />
             </div>
 
             <div class="form-outline mb-4">
-              <label class="form-label" for="form3Example3"
-                >Email address</label
-              >
-              <input type="email" id="form3Example3"  name="email" class="form-control" />
+              <label class="form-label" for="form3Example3">Email address</label>
+              <input
+                type="email"
+                id="form3Example3"
+                name="email"
+                class="form-control"
+              />
             </div>
 
             <div class="form-outline mb-4">
               <label class="form-label" for="form3Example4">Password</label>
-              <input type="password" id="form3Example4"  name="password" class="form-control" />
+              <input
+                type="password"
+                id="form3Example4"
+                name="password"
+                class="form-control"
+              />
             </div>
 
             <button type="submit" class="btn btn-primary btn-block mb-4">
               Register
             </button>
           </form>
-
-
         </div>
       </div>
     </section>
@@ -123,3 +136,4 @@
     ></script>
   </body>
 </html>
+
